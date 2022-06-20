@@ -50,7 +50,7 @@ class Article extends CI_Controller {
                 'Updated_date'=>  date("Y-m-d H:i:s")
             );
 		
-	    $response = this->_client->post($this->API, [
+	    $response = $this->_client->post($this->API, [
 	        'headers' => ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
 	        'body'    => json_encode($data)
 	    ]); 
